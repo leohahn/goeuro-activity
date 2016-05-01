@@ -1,23 +1,27 @@
-angular
-  .module('githubRepos')
-  .directive('exUserInput', directive)
+;(function () {
+  'use strict'
 
-function directive() {
-  return {
-    scope: {},
-    bindToController: {
-      onGetReposClick: '&'
-    },
-    controller: UserInputCtrl,
-    controllerAs: 'ctrl',
-    templateUrl: 'userInput/userInput.html'
+  angular
+    .module('githubRepos')
+    .directive('exUserInput', directive)
+
+  function directive() {
+    return {
+      scope: {},
+      bindToController: {
+        onGetReposClick: '&'
+      },
+      controller: UserInputCtrl,
+      controllerAs: 'ctrl',
+      templateUrl: 'userInput/userInput.html'
+    }
   }
-}
 
-function UserInputCtrl () {
-  let vm = this
+  function UserInputCtrl () {
+    let vm = this
 
-  vm.credentials = {
-    username: ''
+    vm.credentials = {
+      username: ''
+    }
   }
-}
+}())
