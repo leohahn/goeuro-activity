@@ -1,0 +1,9 @@
+<div class="input-group user-input-root">
+  <input type="text" class="form-control" placeholder="Username" ng-model="ctrl.credentials.username" />
+  <span class="input-group-btn">
+    <button ng-click="ctrl.credentials.username.length ? ctrl.onGetReposClick({username: ctrl.credentials.username}) : null"
+            type="button" class="btn btn-primary" ng-class="{disabled: ctrl.credentials.username.length === 0}">
+      Get Repos
+    </button>
+  </span>
+</div>

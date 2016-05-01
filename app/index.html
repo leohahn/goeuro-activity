@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>GoEuro Activity</title>
+
+    <!-- Added font awesome for the spinner icon -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <!-- Bundled CSS -->
+    <link rel="stylesheet" type="text/css" href="../dist/index.css">
+  </head>
+  <body ng-app="githubRepos">
+
+    <!-- Root Component of the Application
+         All directives have the ex prefix -->
+    <ex-root></ex-root>
+
+    <!-- AngularJS -->
+    <script src="../node_modules/angular/angular.js" type="text/javascript"></script>
+    <!-- All of the app scripts -->
+    <script src="index.js" type="text/javascript"></script>
+    <script src="root/root-directive.js" type="text/javascript"></script>
+    <script src="github-service.js" type="text/javascript"></script>
+    <script src="userInput/userInput-directive.js" type="text/javascript"></script>
+    <script src="resultsView/resultsView-directive.js" type="text/javascript"></script>
+    <script src="viewPanel/viewPanel-directive.js" type="text/javascript"></script>
+  </body>
+</html>

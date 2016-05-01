@@ -1,0 +1,20 @@
+<!-- This directive shows different views depending on the functions on the controller -->
+<div class="row">
+
+  <div class="results-view-icon-wrapper" ng-if="ctrl.isLoading(ctrl.view)">
+    <i class="fa fa-spinner fa-3x results-view-loading" aria-hidden="true"></i>
+  </div>
+
+  <ex-view-panel type="danger" title="Oops" description="This username does not exist."
+                 ng-if="ctrl.isUserNotFoundView(ctrl.view)"></ex-view-panel>
+  <ex-view-panel type="danger" title="Oops" description="Sorry, the Api appears to be unresponsive."
+                 ng-if="ctrl.isNonResponsiveApiView(ctrl.view)"></ex-view-panel>
+  <ex-view-panel type="info" title="Oops" description="This user has no repositories."
+                 ng-if="ctrl.isNoRepositoriesView(ctrl.view)"></ex-view-panel>
+
+  <ul class="col-md-12 list-group results-view-list" ng-if="ctrl.isRepositoriesView(ctrl.view)">
+    <li class="list-group-item results-view-item" ng-repeat="repo in ctrl.view.repos">
+      <a href="{{repo.href}}">{{repo.name}}</a>
+    </li>
+  </ul>
+</div>
