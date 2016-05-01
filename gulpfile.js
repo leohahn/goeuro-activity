@@ -14,6 +14,13 @@ gulp.task('test', function (done) {
   }, done).start()
 })
 
+gulp.task('test:watch', function (done) {
+  new Server({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: false
+  }, done).start()
+})
+
 gulp.task('sass', function () {
   sass('app/index.scss')
     .on('error', sass.logError)

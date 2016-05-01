@@ -9,7 +9,4 @@ To run tests and compile the Sass files, follow this instructions (it assumes yo
 - `npm install`
 - `gulp sass` (compiles sass to `dist/index.css`)
 - `gulp test` (run the test suite once)
-
-The tests can also be manually run with karma (if you want to run in watch mode):
-
-- `node_modules/karma/bin/karma start` (in the project root folder)
+- `gulp test:watch` (rerun the test suite on changes)
