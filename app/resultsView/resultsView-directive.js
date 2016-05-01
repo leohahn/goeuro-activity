@@ -22,13 +22,15 @@ function directive () {
   }
 }
 
-function ResultsViewCtrl ($log, EVENT) {
+ResultsViewCtrl.$inject = ['EVENT']
+
+function ResultsViewCtrl (EVENT) {
   let vm = this
 
   vm.isLoading = (view) => {
     return view.type === EVENT.Loading
   }
-  
+
   vm.isNonResponsiveApiView = (view) => {
     return view.type === EVENT.NonResponsiveApi
   }

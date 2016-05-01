@@ -16,7 +16,9 @@ function directive () {
   }
 }
 
-function RootCtrl ($log, githubService, EVENT) {
+RootCtrl.$inject = ['githubService', 'EVENT']
+
+function RootCtrl (githubService, EVENT) {
   let vm = this
 
   vm.onGetReposClick = onGetReposClick

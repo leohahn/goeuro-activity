@@ -2,6 +2,8 @@ angular
   .module('githubRepos')
   .factory('githubService', githubService)
 
+githubService.$inject = ['$q', '$http', '$log', 'EVENT']
+
 function githubService ($q, $http, $log, EVENT) {
   return {
     getRepos: getRepos
@@ -12,6 +14,8 @@ function githubService ($q, $http, $log, EVENT) {
     const timeout = $q.defer()
     let timedOut = false
 
+    // Resolves the timeout promise after four seconds, which in turns
+    // interrupts the http request if not yet resolved.
     setTimeout(() => {
       timedOut = true
       timeout.resolve()
@@ -44,6 +48,7 @@ function githubService ($q, $http, $log, EVENT) {
             repos: null
           }
         } else {
+          $log.error('unhandled error: ' + e)
           return {
             type: EVENT.Unhandled,
             repos: null
