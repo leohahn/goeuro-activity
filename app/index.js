@@ -1,6 +1,6 @@
 // Definition of the application module and all of its constants
 angular
-  .module('githubRepos', [])
+  .module('githubRepos', ['ngAnimate'])
   .constant('EVENT', {
     Loading: 'EVENT_LOADING',
     UserFound: 'EVENT_USER_FOUND',

@@ -1,5 +1,13 @@
 .results-view-list {
   padding-left: 14px;
+
+  &.ng-enter {
+    transition: .3s;
+    opacity: 0;
+  }
+  &.ng-enter-active {
+    opacity: 1;
+  }
 }
 
 .results-view-item {
@@ -7,6 +15,7 @@
 
   &:hover {
     background: rgb(227, 237, 238);
+    animation: move-left .3s forwards;
   }
 
   a {
@@ -42,4 +51,20 @@
   to {
     transform: rotate(360deg);
   }
+}
+@keyframes move-left {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(2px);
+  }
+}
+
+ex-view-panel.ng-enter {
+  transition: .3s;
+  opacity: 0;
+}
+ex-view-panel.ng-enter-active {
+  opacity: 1;
 }
