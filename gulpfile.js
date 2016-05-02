@@ -6,7 +6,7 @@ var autoprefixer = require('gulp-autoprefixer')
 
 gulp.task('default', ['sass', 'test'])
 
-gulp.task('serve', function (done) {
+gulp.task('serve', function () {
   connect.server({
     root: 'app'
   })
@@ -42,5 +42,5 @@ gulp.task('sass', function () {
       ],
       cascade: false
     }))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('app/dist'))
 })
