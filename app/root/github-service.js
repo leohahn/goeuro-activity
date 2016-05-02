@@ -13,6 +13,16 @@
     }
     //-------------------
 
+    /**
+     * Sends a HTTP request to the github api. This request gets all the
+     * repositories from the user passed on the parameter, and returns only
+     * the relevant information, i.e, objects only with the name of the
+     * repository and its url. The request times out after 4 seconds, returning
+     * a EVENT.NonResponsiveApi.
+     * @param  {string} username
+     * @return {promise}          The promise resolves with an object that
+     *                            contains an EVENT and a maybe list of repositories.
+     */
     function getRepos (username) {
       const timeout = $q.defer()
       let timedOut = false

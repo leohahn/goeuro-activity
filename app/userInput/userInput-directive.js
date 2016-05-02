@@ -5,6 +5,12 @@
     .module('githubRepos')
     .directive('exUserInput', directive)
 
+  /*
+   * Directive that has a button and an input. It saves the value of the input
+   * inside `credentials.name`, and calls the function `onGetReposClick` received
+   * from its parent with `credentials.name` as an argument. It does not call
+   * the function, however, when `credentials.name` is empty.
+   */
   function directive() {
     return {
       scope: {},
