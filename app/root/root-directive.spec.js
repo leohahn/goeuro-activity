@@ -48,5 +48,4 @@ describe('root directive', () => {
       expect(scope.ctrl.onGetReposClick).not.toHaveBeenCalled()
     })
   })
-
 })

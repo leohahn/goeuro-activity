@@ -28,21 +28,16 @@ describe('userInput directive', () => {
   it('calls onGetReposClick with {username: ctrl.credentials.username}', () => {
     scope.ctrl.credentials.username = 'LEONARDO'
     scope.$digest()
-    const onGetReposClick = (username) => {
-      expect(username).toEqual({ username: 'LEONARDO' })
-    }
+    scope.ctrl.onGetReposClick = jasmine.createSpy('onGetReposClick')
 
-    scope.ctrl.onGetReposClick = onGetReposClick
     elem.find('button').triggerHandler('click')
+    expect(scope.ctrl.onGetReposClick).toHaveBeenCalledWith({ username: 'LEONARDO' })
   })
 
   it('does not call onGetReposClick with input empty', () => {
     expect(elem.find('input')[0].value).toBe('')
-    const onGetReposClick = (username) => {
-      expect(true).toBe(false)
-    }
-
-    scope.ctrl.onGetReposClick = onGetReposClick
+    scope.ctrl.onGetReposClick = jasmine.createSpy('onGetReposClick')
     elem.find('button').triggerHandler('click')
+    expect(scope.ctrl.onGetReposClick).not.toHaveBeenCalled()
   })
 })
