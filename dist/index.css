@@ -1,35 +1,6 @@
 .user-input-root {
   padding-bottom: 20px; }
 
-.results-view-list {
-  padding-left: 14px; }
-
-.results-view-item {
-  padding: 0px; }
-  .results-view-item:hover {
-    background: #e3edee;
-    -webkit-transform: translateX(3px);
-    -ms-transform: translateX(3px);
-    -o-transform: translateX(3px);
-    transform: translateX(3px); }
-  .results-view-item a {
-    outline: 0;
-    padding: 10px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    -webkit-flex-shrink: 1;
-    -ms-flex-negative: 1;
-    flex-shrink: 1; }
-    .results-view-item a:hover {
-      color: #0a1325;
-      text-decoration: none; }
-
 .results-view-icon-wrapper {
   position: relative; }
 
@@ -73,3 +44,33 @@
 .view-panel {
   margin-right: 13px;
   margin-left: 13px; }
+
+.repositories-list-list {
+  padding-left: 14px;
+  padding-right: 14px; }
+
+.repositories-list-item {
+  padding: 0px; }
+  .repositories-list-item:hover {
+    background: #e3edee;
+    -webkit-transform: translateX(3px);
+    -ms-transform: translateX(3px);
+    -o-transform: translateX(3px);
+    transform: translateX(3px); }
+  .repositories-list-item a {
+    outline: 0;
+    padding: 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1; }
+    .repositories-list-item a:hover {
+      color: #0a1325;
+      text-decoration: none; }

@@ -1,0 +1,26 @@
+.repositories-list-list {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.repositories-list-item {
+  padding: 0px;
+
+  &:hover {
+    background: rgb(227, 237, 238);
+    transform: translateX(3px);
+  }
+
+  a {
+    outline: 0;
+    padding: 10px;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    &:hover {
+      color: rgb(10, 19, 37);
+      text-decoration: none;
+    }
+  }
+}
