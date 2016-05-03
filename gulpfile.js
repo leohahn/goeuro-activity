@@ -1,10 +1,15 @@
 var gulp = require('gulp')
+var connect = require('gulp-connect')
 var Server = require('karma').Server
 var sass = require('gulp-ruby-sass')
 var autoprefixer = require('gulp-autoprefixer')
 
 gulp.task('default', function () {
 
+})
+
+gulp.task('serve', function () {
+  connect.server()
 })
 
 gulp.task('test', function (done) {
