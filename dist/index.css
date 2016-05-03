@@ -7,7 +7,11 @@
 .results-view-item {
   padding: 0px; }
   .results-view-item:hover {
-    background: #e3edee; }
+    background: #e3edee;
+    -webkit-transform: translateX(3px);
+    -ms-transform: translateX(3px);
+    -o-transform: translateX(3px);
+    transform: translateX(3px); }
   .results-view-item a {
     outline: 0;
     padding: 10px;
