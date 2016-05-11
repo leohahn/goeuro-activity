@@ -12,6 +12,10 @@ gulp.task('serve', function () {
   })
 })
 
+gulp.task('serve', function () {
+  connect.server()
+})
+
 gulp.task('test', function (done) {
   new Server({
     configFile: __dirname + '/karma.conf.js',
